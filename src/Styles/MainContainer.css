@@ -1,0 +1,8 @@
+.mainContainer {
+    height: 100vh;
+    z-index: 1;
+    flex-grow: 1;
+    backdrop-filter: blur(10px);
+    background: rgba(34, 34, 34, 0.6);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

@@ -1,14 +1,15 @@
 import React from 'react';
 import { BsVolumeUpFill, BsMusicNoteList } from "react-icons/bs"
 import { FaDesktop } from "react-icons/fa"
+import Track from "../img/track.png"
 
 function TrackList() {
   return (
     <div className='trackList'>
         <div className="top">
-            <img src="" alt="" />
-            <p>
-                Sample Name <span>Artiste</span>
+            <img src={Track} alt="" />
+            <p className="trackName">
+                Sample Name <span className="trackSpan">Artiste</span>
             </p>
         </div>
         <div className="bottom">

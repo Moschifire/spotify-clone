@@ -6,7 +6,8 @@
     backdrop-filter: blur(10px);
     padding: 20px 15px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
 }
 
 .leftMenu .logoContainer {
@@ -163,6 +164,11 @@
     margin: 10px 0;
 }
 
+.playListContainer .playListScroll .playList:hover {
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
 .playListContainer .playListScroll .playList i {
     font-size: 18px;
 }
@@ -180,4 +186,139 @@
     text-overflow: ellipsis;
     overflow: hidden;
     display: inline;
+}
+
+.trackList {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.trackList .top {
+    display: flex;
+    align-items: center;
+}
+
+.trackList .top img {
+    width: 30% !important;
+}
+
+.trackList .top .trackName {
+    margin-left: 10px;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.trackList .top .trackName .trackSpan {
+    display: block;
+    font-size: 12px;
+    color: #848484;
+}
+
+.trackList .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #848484;
+}
+
+.trackList .bottom i {
+    font-size: 18px;
+}
+
+.trackList .bottom i:hover {
+    color: #f1f1f1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.trackList .bottom input {
+    position: relative;
+    height: 5px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    appearance: none;
+}
+
+/* Chrome and Safari */
+.trackList .bottom input::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: #49e12e;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+}
+
+.trackList .bottom input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    border-radius: 10px;
+    background: #f1f1f1;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+    transition: all 250ms linear;
+}
+
+/* firefox */
+.trackList .bottom input::-moz-progress-bar {
+    background: #49e12e;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    transition: width 250ms linear;
+}
+
+.trackList .bottom input::-moz-range-thumb {
+    width: 10px;
+    height: 20px;
+    border-radius: 10px;
+    background: #f1f1f1;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+    transition: all 250ms linear;
+}
+
+@media screen and (max-width: 550px) {
+    .leftMenu {
+        width: 64px;
+        min-width: 64px;
+    }
+    .leftMenu .searchBox {
+        display: none;
+    }
+    .leftMenu .trackList {
+        display: none;
+    }
+    .leftMenu .playListContainer {
+        display: none;
+    }
+    .leftMenu .MenuContainer ul li a span {
+        display: none;
+    }
+    .leftMenu .MenuContainer ul li a i {
+        font-size: 26px;
+    }
+    .leftMenu .MenuContainer ul li {
+        margin: 25px 0;
+    }
+    .leftMenu .logoContainer h2{
+        margin: 20px;
+    }
 }
