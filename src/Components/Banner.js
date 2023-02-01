@@ -1,5 +1,5 @@
 import React from 'react'
-import Artist from "../img/artist.jpg";
+import Artist from "../img/artist.jpeg";
 import Check from "../img/check.png";
 import { FaEllipsisH, FaHeadphones, FaCheck } from "react-icons/fa"
 
@@ -16,7 +16,7 @@ function Banner() {
             <div className="artist">
                 <div className="left">
                     <div className="name">
-                        <h2>A-Ha</h2>
+                        <h2>Olamide</h2>
                         <img src={Check} alt="" />
                     </div>
                     <p><i><FaHeadphones /></i> 5,000,230 <span>Monthly Listeners</span></p>
