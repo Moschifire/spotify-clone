@@ -79,4 +79,6 @@ const Songs = [
         song: "https://firebasestorage.googleapis.com/v0/b/spotify-clone-ebce2.appspot.com/o/Songs%2FRema-Lady-(JustNaija.com).mp3?alt=media&token=b1d36b1a-ffc4-4a64-8ccf-fc00b4451158",
         imgSrc: "https://firebasestorage.googleapis.com/v0/b/spotify-clone-ebce2.appspot.com/o/Artworks%2FRema-Lady.jpg?alt=media&token=539d5d30-78a3-43a9-818a-263249e9a018"
     }
-]
+];
+
+export { Songs }
