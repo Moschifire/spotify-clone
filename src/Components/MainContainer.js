@@ -34,7 +34,7 @@ function MainContainer() {
         <p><i><FaUsers /></i> 12.3M <span>Followers</span></p>
       </div>
 
-      <AudioList />
+      <AudioList /> 
     </div>
   )
 }
